@@ -207,12 +207,22 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
     getBestrank(parseInt(getAverage("yeah")), function() {
         //credits
         ins("___________________");
-        ins("Elliot's amazing #baddie. Version 0.11")
+        ins("Elliot's amazing #baddie. Version 0.11b")
         //ew
         replaceWithLetter();
     })
 } else if (document.title.indexOf("Class Score Detail") != -1) {
     //If you clicked on a grade yk
+} else if (document.title.indexOf("Student and Parent Sign In") != -1) {
+    //Login page for one click login
+    document.getElementById("signin-custom-message").outerHTML = "";
+    newElement = document.createElement("button")
+    newElement.appendChild(document.createTextNode("Use Quicksignin"));
+    document.getElementById('btn-enter-sign-in-div').appendChild(newElement);
+    newElement.addEventListener("submit", function(evt) {
+        evt.preventDefault();
+        window.history.back();
+    }, true)
 }
 
   //
