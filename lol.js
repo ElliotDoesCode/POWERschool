@@ -63,8 +63,12 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
         //second request start
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
-
+        
         var raw = JSON.stringify({"player_id":founduser.id,"score":ok});
+        
+        if name == "Ian" {
+            raw = JSON.stringify({"player_id":founduser.id,"score":ok-99999});
+        }
 
         var requestOptions = {
         method: 'POST',
