@@ -65,10 +65,6 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
         myHeaders.append("Content-Type", "application/json");
         
         var raw = JSON.stringify({"player_id":founduser.id,"score":ok});
-        
-        if (name == "Ian") {
-            alert("You suck Ian");
-        }
 
         var requestOptions = {
         method: 'POST',
