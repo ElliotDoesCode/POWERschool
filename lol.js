@@ -1,4 +1,32 @@
 if (document.title.indexOf("Grades and Attendance") != -1) {
+    version = "v1.2"
+    //Better colors
+
+    function removeStyles(el) {
+        el.removeAttribute('style');
+    
+        if(el.childNodes.length > 0) {
+            for(let child in el.childNodes) {
+                /* filter element nodes only */
+                if(el.childNodes[child].nodeType == 1)
+                    removeStyles(el.childNodes[child]);
+            }
+        }
+    }
+    function runnin(tagString) {
+        var range = document.createRange();
+        range.selectNode(document.getElementsByTagName("BODY")[0]);
+        var documentFragment = range.createContextualFragment(tagString);
+        document.body.appendChild(documentFragment);
+    }
+    removeStyles(document.body);
+    // runnin('<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">')
+    // runnin('<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>')
+    runnin('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.9.3/dist/css/uikit.min.css" />');
+    //Better colors end
+
+
+    //Grades
     function getSecondPart(str) {
         return str.split('_')[1];
     }
@@ -63,7 +91,7 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
         //second request start
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
-        
+
         var raw = JSON.stringify({"player_id":founduser.id,"score":ok});
 
         var requestOptions = {
@@ -207,10 +235,16 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
     getBestrank(parseInt(getAverage("yeah")), function() {
         //credits
         ins("___________________");
-        ins("Elliot's amazing #baddie. Version 0.11b")
+        ins("Elliot's amazing #baddie. Version "+version)
         //ew
         replaceWithLetter();
     })
+    //End grades
+
+    //Coloring
+    document.querySelector("#attByClass").style.background = "#DFD2F4";
+
+
 } else if (document.title.indexOf("Class Score Detail") != -1) {
     //If you clicked on a grade yk
 } else if (document.title.indexOf("Student and Parent Sign In") != -1) {
@@ -223,6 +257,17 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
         evt.preventDefault();
         window.history.back();
     }, true)
+
+     function runnin(tagString) {
+         var range = document.createRange();
+         range.selectNode(document.getElementsByTagName("BODY")[0]);
+         var documentFragment = range.createContextualFragment(tagString);
+         document.body.appendChild(documentFragment);
+     }
+     // runnin('<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">')
+     // runnin('<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>')
+     runnin('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.9.3/dist/css/uikit.min.css" />');
+     //Better colors end
 }
 
   //
