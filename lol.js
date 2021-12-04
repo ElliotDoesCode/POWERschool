@@ -1,5 +1,5 @@
 if (document.title.indexOf("Grades and Attendance") != -1) {
-    version = "v1.2"
+    version = "v1.2b"
     //Better colors
 
     function removeStyles(el) {
@@ -171,7 +171,7 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
         } else if (grade <=82 && grade >=80){
             lettergrade = "B-"
         } else {
-            lettergrade = "Basically an F...";
+            lettergrade = "Basically an F lol";
         }
         return lettergrade
     }
