@@ -1,5 +1,6 @@
 if (document.title.indexOf("Grades and Attendance") != -1) {
-    version = "v1.2b"
+    var version = "v1.2b"
+    var colorpick = "#d4e4ff"
     //Better colors
 
     function removeStyles(el) {
@@ -245,7 +246,7 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
     //End grades
 
     //Coloring
-    document.querySelector("#attByClass").style.background = "#ffd6d6";
+    document.querySelector("#attByClass").style.background = colorpick;
 
 
 } else if (document.title.indexOf("Class Score Detail") != -1) {
