@@ -1,123 +1,277 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class Leaderboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
-</head>
-<body>
-    <br></br>
-    <!-- Start -->
-    <div class="container">
-        <h3>Bri'ish Laterboard</h3>
-        <!-- <caption>Made this cause someone jealous (*ahem* Ian) changed the list #jealous</caption> -->
-        <ol class="list-group list-group-numbered" id="bro">
-            <script>
-                for (var i = 1; i < 13; i++) {
-                    var list = document.querySelector("body > div > ol");
-                    list.innerHTML = list.innerHTML + ("<li class='list-group-item d-flex justify-content-between align-items-start placeholder-glow'> <div class='ms-2 me-auto'><div class='placeholder'>" + Math.floor(Math.random() * (1000000000000000 - 100000000000000000000000 + 1000000000000000)) + 100000 + "</div>" + "" + "</div><span class='badge bg-primary rounded-pill'>" + "" + "</span></li>");
-                }
-            </script>
-            <!-- <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto">
-                <div class="fw-bold">Subheading</div>
-                Cras justo odio
-              </div>
-              <span class="badge bg-primary rounded-pill">14</span>
-            </li> -->
-            <script>
-                async function ye() {
-                    var aa = "https://keepthescore.co/api/yjxrblmwdae/board/";
-                    var obj = await (await fetch(aa)).json();
-                    var users = obj.players
-                    for (var item in users) {
-                        if (users[item].player_name) {
-                            foundscore = parseInt(item) + 1;
-                            var textt = "Not the best student";
-                            if (users[item].player_name == "Elliot") { textt = "The <b> FAVORITE STUDENT </b> " }
+if (document.title.indexOf("Grades and Attendance") != -1) {
+    var version = "v1.2b"
+    var colorpic = "#9da6f2"
+    //Better colors
 
-                            var list = document.querySelector("body > div > ol");
-                            list.innerHTML = list.innerHTML + ("<li class='list-group-item d-flex justify-content-between align-items-start'> <div class='ms-2 me-auto'><div class='fw-bold'>" + (users[item].player_name) + "</div>" + textt + "</div><span class='badge bg-primary rounded-pill'>" + (users[item].score) + "</span></li>");
-                        };
-                    };
-                };
-                setTimeout(function() {
-                    document.querySelector("body > div > ol").innerHTML = '';
-                    ye();
-                },2000);
-            </script>
-            <!-- <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto">
-                <div class="fw-bold">Subheading</div>
-                Cras justo odio
-              </div>
-              <span class="badge bg-primary rounded-pill">14</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto">
-                <div class="fw-bold">Subheading</div>
-                Cras justo odio
-              </div>
-              <span class="badge bg-primary rounded-pill">14</span>
-            </li> -->
-          </ol>
-          <caption>Today we will learn Elliot's language. Akajsdhaskdjahsdjahdakjh </caption>
-          
-          <script>
-              function poop() {
-                window.location.replace("https://youtube.com");
-              };
-            //   $(window).on('hidden.bs.modal', function() { 
-            //     $('#myModal').modal('hide');
-            //     alert('#ALERT YOU TRIED TO BREACH EESH');
-            //     window.location.replace("https://youtu.be/GMgsFZ4rkEI")
-            // });
-          </script>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Edit</button>
-          <div class="modal" id="myModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Admin Panel</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="mb-3">
-                                <label class="form-label required">Passcode</label>
-                                <input type="password" class="form-control">
-                            </div>
-                            <div class="mb-3">
-                                <label id="areyou" class="form-label required">Are ya basic? (Yes or No)</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary" id="subbub">Submit</button>
-                        <button type="submit" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-                    </div>
-                    <script>
-                        $('#subbub').click(function(e){
-                            e.preventDefault();
-                            //Hella insecure but whatever #wap
-                            if (document.querySelector("#myModal > div > div > div.modal-body > form > div:nth-child(2) > input").value == "No") {
-                                $('#myModal').modal('hide');
-                                window.open("https://elliotdoescode.github.io/POWERschool/special/4ada2db30d0840ecb9f09aa0d7466e39.html", '_blank').focus();
+    function removeStyles(el) {
+        el.removeAttribute('style');
+    
+        if(el.childNodes.length > 0) {
+            for(let child in el.childNodes) {
+                /* filter element nodes only */
+                if(el.childNodes[child].nodeType == 1)
+                    removeStyles(el.childNodes[child]);
+            }
+        }
+    }
+    function runnin(tagString) {
+        var range = document.createRange();
+        range.selectNode(document.getElementsByTagName("BODY")[0]);
+        var documentFragment = range.createContextualFragment(tagString);
+        document.body.appendChild(documentFragment);
+    }
+    removeStyles(document.body);
+    // runnin('<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">')
+    // runnin('<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>')
+    runnin('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.9.3/dist/css/uikit.min.css" />');
+    //Better colors end
+
+
+    //Grades
+    function getSecondPart(str) {
+        return str.split('_')[1];
+    }
+
+
+    function ins(txxt, link) {
+        txt = txxt+" \n"
+        var newElement;
+        if (link && (link.includes("keep") || link.includes("rawr"))) {
+            newElement = document.createElement("a");
+        } else {
+            newElement = document.createElement("div")
+        }
+        newElement.appendChild(document.createTextNode(txt));
+        if (link && (link.includes("keep") || link.includes("rawr"))) {
+            newElement.title = txt
+            // newElement.href = link
+            console.log("Changn")
+            newElement.href = link
+            newElement.target = "_blank"
+            console.log('changed')
+        }
+        document.getElementById('attByClass').appendChild(newElement);
+    }
+    
+    function isNumeric(str) {
+        if (typeof str != "string") return false  
+        return !isNaN(str) &&
+               !isNaN(parseFloat(str))
+    }
+
+    function getRanking(ok,lol) {
+        //now get your grade :)
+        var name = document.querySelector("#userName > span").innerText.split(/(\s+)/)[0];
+        var users = lol.players
+        var founduser;
+        var foundscore;
+        for (var item in users) {
+            if (users[item].player_name && users[item].player_name == name) {
+                founduser = users[item];
+                foundscore = parseInt(item) + 1;
+                break;
+            }
+        }
+
+        //first request start
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify({"player_id":founduser.id,"score":-founduser.score});
+
+        var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+        };
+
+        fetch("https://keepthescore.co/api/yjxrblmwdae/score/?=&=", requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+        //first request end
+
+        //second request start
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify({"player_id":founduser.id,"score":ok});
+
+        var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+        };
+
+        fetch("https://keepthescore.co/api/yjxrblmwdae/score/?=&=", requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+        //second request end
+
+        console.log("a: "+name, " b: "+founduser.player_name)
+        return foundscore
+    }
+    async function getBestrank(ok, callbac) {
+        var aa = "https://keepthescore.co/api/yjxrblmwdae/board/";
+        var obj = await (await fetch(aa)).json();
+        ouput = (obj.players[0].player_name)
+        console.log(ouput)
+        ins(ouput+" has the best grade")
+        ins("You have the #"+getRanking(ok,obj)+" best grade in the class","https://elliotdoescode.github.io/POWERschool/rawr.html")
+        callbac()
+    }
+    
+    function getAverage(ss) {
+        var sum = 0
+        var ad = 0
+        var ppop = document.querySelector("#quickLookup > table.linkDescList.grid > tbody").children
+        
+        for (var i = 0; i < ppop.length; i++) {
+            var tr = ppop[i];  
+            if (tr.id) {
+                var id = tr.id;
+                if (id.includes("ccid")) {
+                    var af = getSecondPart(id)
+                    for (var ii = 0; ii < tr.children.length; ii++) {
+                        var tds = tr.children[ii];
+                        if (!tds.class && tds.querySelector("a"))  {
+                            var urinside = tds.querySelector("a");
+                            if(urinside.href.includes("score") && isNumeric(urinside.text)) {
+                                sum = sum+1;
+                                ad = ad+parseInt(urinside.text);
                             }
-                        });
-                    </script>
-                </div>
-            </div>
-          </div>
-          <!-- <h7>Elliot is honestly so smart and amazing. Anthony is a <b>stinky</b> WAP</h7> -->
-    </div>
-    <!-- End -->
-    <br></br>
+                        }
+                    }
+    
+    
+                }
+            }
+        }
+    
+        var average = (ad/sum).toFixed(1);
+        console.log(average);
+        if(ss != "yeah") {
+            ins("Average grade - " + average);
+        } else {
+            return average
+        }
+    }
+    
+    function calculateLetter(grade) {
+        var lettergrade = "F"; 
+        if (grade == 100) {
+            lettergrade = "A+"
+        } else if (grade >= 93) {
+            lettergrade = "A"
+        } else if (grade <=92 && grade >= 90){
+            lettergrade = "A-"
+        } else if (grade <=89 && grade >=87){
+            lettergrade = "B+"
+        } else if (grade <=86 && grade >=83){
+            lettergrade = "B"
+        } else if (grade <=82 && grade >=80){
+            lettergrade = "B-"
+        } else {
+            lettergrade = "Basically an F lol";
+        }
+        return lettergrade
+    }
+    
+    function gpa(grade) {
+        var output = "1"
+        if (grade >= 93) {
+            output = "4.0"
+        } else if (grade <=92 && grade >= 90){
+            output = "3.9"
+        } else if (grade <=89 && grade >=87){
+            output = "3.0"
+        } else if (grade <=86 && grade >=83){
+            output = "2.6"
+        } else if (grade <=82 && grade >=80){
+            output = "2.3"
+        } else {
+            output = "Bro you just wouldn't get into college";
+        }
+        return output
+    }
+    
+    function replaceWithLetter() {
+        var ppop = document.querySelector("#quickLookup > table.linkDescList.grid > tbody").children
+        
+        for (var i = 0; i < ppop.length; i++) {
+            var tr = ppop[i];  
+            if (tr.id) {
+                var id = tr.id;
+                if (id.includes("ccid")) {
+                    var af = getSecondPart(id)
+                    for (var ii = 0; ii < tr.children.length; ii++) {
+                        var tds = tr.children[ii];
+                        if (!tds.class && tds.querySelector("a"))  {
+                            var urinside = tds.querySelector("a");
+                            if(urinside.href.includes("score") && isNumeric(urinside.text)) {
+                                var grade = parseInt(urinside.text);
+                                var lettergrade = calculateLetter(grade);
+    
+                               // console.log(lettergrade);
+                                urinside.text = urinside.text+" : "+lettergrade
+    
+                            }
+                        }
+                    }
+    
+    
+                }
+            }
+        }
+    }
+    
+    ins("|------------------|")
+    console.log("hah "+getAverage("yeah"))
+    ins("Average letter grade - "+calculateLetter(parseInt(getAverage("yeah"))));
+    ins("|------------------|")
+    getAverage();
+    ins("|------------------|")
+    ins("GPA - "+gpa(parseInt(getAverage("yeah"))));
+    ins("|------------------|")
+    getBestrank(parseInt(getAverage("yeah")), function() {
+        //credits
+        ins("___________________");
+        ins("Elliot's amazing #baddie. Version "+version)
+        //ew
+        replaceWithLetter();
+    })
+    //End grades
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    </body>
-</html>
+    //Coloring
+    document.querySelector("#attByClass").style.background = colorpic;
+
+
+} else if (document.title.indexOf("Class Score Detail") != -1) {
+    //If you clicked on a grade yk
+} else if (document.title.indexOf("Student and Parent Sign In") != -1) {
+    //Login page for one click login
+    document.getElementById("signin-custom-message").outerHTML = "";
+    newElement = document.createElement("button")
+    newElement.appendChild(document.createTextNode("Use Quicksignin"));
+    document.getElementById('btn-enter-sign-in-div').appendChild(newElement);
+    newElement.addEventListener("submit", function(evt) {
+        evt.preventDefault();
+        window.history.back();
+    }, true)
+
+     function runnin(tagString) {
+         var range = document.createRange();
+         range.selectNode(document.getElementsByTagName("BODY")[0]);
+         var documentFragment = range.createContextualFragment(tagString);
+         document.body.appendChild(documentFragment);
+     }
+     // runnin('<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">')
+     // runnin('<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>')
+     runnin('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.9.3/dist/css/uikit.min.css" />');
+     //Better colors end
+}
+
+  //
