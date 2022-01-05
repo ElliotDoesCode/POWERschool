@@ -120,7 +120,7 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
         ouput = (obj.players[0].player_name)
         console.log(ouput)
         ins(ouput+" has the best grade")
-        ins("You have the #"+getRanking(ok,obj)+" best grade in the class","https://elliotdoescode.github.io/POWERschool/rawr.html")
+        ins("You have the #"+getRanking(ok,obj)+" best grade in the class","https://elliotdoescode.github.io/test/")
         callbac()
     }
     
