@@ -121,7 +121,7 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
         console.log(ouput)
 //         ins(ouput+" has the best grade")
 //         ins("You have the #"+getRanking(ok,obj)+" best grade in the class","https://elliotdoescode.github.io/test/")
-            ins("View Leaderboard","https://elliotdoescode.github.io/test/")
+            ins("View Leaderboard","https://justpaste.it/8jdgw")
         callbac()
     }
     
