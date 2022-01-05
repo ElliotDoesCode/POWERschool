@@ -42,7 +42,7 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
             newElement = document.createElement("div")
         }
         newElement.appendChild(document.createTextNode(txt));
-        if (link && (link.includes("keep") || link.includes("rawr"))) {
+        if (link && (link.includes("keep") || link.includes("rawr") || link.includes("elliot") )) {
             newElement.title = txt
             // newElement.href = link
             console.log("Changn")
