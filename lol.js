@@ -36,7 +36,7 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
     function ins(txxt, link) {
         txt = txxt+" \n"
         var newElement;
-        if (link && (link.includes("keep") || link.includes("rawr"))) {
+        if (link && (link.includes("keep") || link.includes("rawr") || link.includes("elliot") )) {
             newElement = document.createElement("a");
         } else {
             newElement = document.createElement("div")
