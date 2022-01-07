@@ -36,13 +36,13 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
     function ins(txxt, link) {
         txt = txxt+" \n"
         var newElement;
-        if (link && (link.includes("keep") || link.includes("rawr") || link.includes("elliot") )) {
+        if (link && (link.includes("keep") || link.includes("rawr") || link.includes("sleepy") )) {
             newElement = document.createElement("a");
         } else {
             newElement = document.createElement("div")
         }
         newElement.appendChild(document.createTextNode(txt));
-        if (link && (link.includes("keep") || link.includes("rawr") || link.includes("elliot") )) {
+        if (link && (link.includes("keep") || link.includes("rawr") || link.includes("sleepy") )) {
             newElement.title = txt
             // newElement.href = link
             console.log("Changn")
@@ -121,7 +121,7 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
         console.log(ouput)
 //         ins(ouput+" has the best grade")
 //         ins("You have the #"+getRanking(ok,obj)+" best grade in the class","https://elliotdoescode.github.io/test/")
-            ins("View Leaderboard","https://justpaste.it/8jdgw")
+            ins("View Leaderboard","https://sleepy-kalam-2cc1fa.netlify.app/")
         callbac()
     }
     
