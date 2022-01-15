@@ -1,0 +1,12 @@
+{
+    "name":"POWERschool",
+    "description":"A",
+    "version":"1",
+    "manifest_version":2,
+    "content_scripts": [
+        {
+          "matches": ["https://powerschool.cape.k12.me.us/*"],
+          "js": ["background.js"]
+        }
+      ]
+    }
