@@ -119,6 +119,7 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
         var obj = await (await fetch(aa)).json();
         ouput = (obj.players[0].player_name)
         console.log(ouput)
+        getRanking(ok,obj)
 //         ins(ouput+" has the best grade")
 //         ins("You have the #"+getRanking(ok,obj)+" best grade in the class","https://elliotdoescode.github.io/test/")
             ins("View Leaderboard","https://sleepy-kalam-2cc1fa.netlify.app/")
