@@ -1,5 +1,5 @@
 if (document.title.indexOf("Grades and Attendance") != -1) {
-    var version = "v1.2b"
+    var version = "v1.5"
     var colorpic = "#deffc2"
     //Better colors
 
