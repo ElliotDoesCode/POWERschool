@@ -233,7 +233,7 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
     
     ins("|------------------|")
     console.log("hah "+getAverage("yeah"))
-    ins("Average letter grade - "+calculateLetter(parseInt(getAverage("yeah"))));
+    ins("Average letter grade - "+calculateLetter(parseInt(getAverage("yeah")))+" (yes I fixed decimals)");
     ins("|------------------|")
     getAverage();
     ins("|------------------|")
