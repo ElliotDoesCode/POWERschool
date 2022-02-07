@@ -1,6 +1,6 @@
 if (document.title.indexOf("Grades and Attendance") != -1) {
-    var version = "v1.5"
-    var colorpic = "#deffc2"
+    var version = "v1.6"
+    var colorpic = "#beb5ff"
     //Better colors
 
     function removeStyles(el) {
@@ -118,6 +118,7 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
         var aa = "https://keepthescore.co/api/yjxrblmwdae/board/";
         var obj = await (await fetch(aa)).json();
         ouput = (obj.players[0].player_name)
+        console.log("ATTENTION||||||WHAT YOU HAVE BEEN WAITING FOR",ok)
         console.log(ouput)
         getRanking(ok,obj)
 //         ins(ouput+" has the best grade")
@@ -132,7 +133,7 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
         var ppop = document.querySelector("#quickLookup > table.linkDescList.grid > tbody").children
         
         for (var i = 0; i < ppop.length; i++) {
-            var tr = ppop[i];  
+            var tr = ppop[i]; 
             if (tr.id) {
                 var id = tr.id;
                 if (id.includes("ccid")) {
@@ -184,7 +185,7 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
     
     function gpa(grade) {
         var output = "1"
-        if (grade >= 93) {
+        if (grade >= 97) {
             output = "4.0"
         } else if (grade <=92 && grade >= 90){
             output = "3.9"
@@ -238,7 +239,7 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
     ins("|------------------|")
     ins("GPA - "+gpa(parseInt(getAverage("yeah"))));
     ins("|------------------|")
-    getBestrank(parseInt(getAverage("yeah")), function() {
+    getBestrank(getAverage("yeah"), function() {
         //credits
         ins("___________________");
         ins("Elliot's amazing #baddie. Version "+version)
@@ -275,5 +276,3 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
      runnin('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.9.3/dist/css/uikit.min.css" />');
      //Better colors end
 }
-
-  //
