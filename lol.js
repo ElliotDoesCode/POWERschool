@@ -187,6 +187,8 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
         var output = "1"
         if (grade >= 97) {
             output = "4.0"
+        } else if (grade <= 93){
+            output = "Ian Frost"
         } else if (grade <=92 && grade >= 90){
             output = "3.9"
         } else if (grade <=89 && grade >=87){
@@ -233,7 +235,7 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
     
     ins("|------------------|")
     console.log("hah "+getAverage("yeah"))
-    ins("Average letter grade - "+calculateLetter(parseInt(getAverage("yeah")))+" (yes I fixed decimals)");
+    ins("Average letter grade - "+calculateLetter(parseInt(getAverage("yeah")))+"");
     ins("|------------------|")
     getAverage();
     ins("|------------------|")
