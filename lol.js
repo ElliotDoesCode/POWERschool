@@ -59,72 +59,82 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
                !isNaN(parseFloat(str))
     }
 
-    function getRanking(ok,lol) {
+    function getRanking(ok) {
         //now get your grade :)
         var name = document.querySelector("#userName > span").innerText.split(/(\s+)/)[0];
-        var users = lol.players
-        var founduser;
-        var foundscore;
-        for (var item in users) {
-            if (users[item].player_name && users[item].player_name == name) {
-                founduser = users[item];
-                foundscore = parseInt(item) + 1;
-                break;
-            }
+        // var users = lol.players
+        // var founduser;
+        // var foundscore;
+        // for (var item in users) {
+        //     if (users[item].player_name && users[item].player_name == name) {
+        //         founduser = users[item];
+        //         foundscore = parseInt(item) + 1;
+        //         break;
+        //     }
+        // }
+
+        // first request start
+        window.post = function(url) {
+            return fetch(url, {method: "POST"});
         }
+        post("http://localhost:8081/update/"+name+"/"+ok);
+        // first request end
+        // second request start
+
+        // second request end
 
         //first request start
-        var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
+        // var myHeaders = new Headers();
+        // myHeaders.append("Content-Type", "application/json");
 
-        var raw = JSON.stringify({"player_id":founduser.id,"score":-founduser.score});
+        // var raw = JSON.stringify({"player_id":founduser.id,"score":-founduser.score});
 
-        var requestOptions = {
-        method: 'POST',
-        headers: myHeaders,
-        body: raw,
-        redirect: 'follow'
-        };
+        // var requestOptions = {
+        // method: 'POST',
+        // headers: myHeaders,
+        // body: raw,
+        // redirect: 'follow'
+        // };
 
-        fetch("https://keepthescore.co/api/yjxrblmwdae/score/?=&=", requestOptions)
-        .then(response => response.text())
-        .then(result => console.log(result))
-        .catch(error => console.log('error', error));
+        // fetch("https://keepthescore.co/api/yjxrblmwdae/score/?=&=", requestOptions)
+        // .then(response => response.text())
+        // .then(result => console.log(result))
+        // .catch(error => console.log('error', error));
         //first request end
 
         //second request start
-        var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
+        // var myHeaders = new Headers();
+        // myHeaders.append("Content-Type", "application/json");
 
-        var raw = JSON.stringify({"player_id":founduser.id,"score":ok});
+        // var raw = JSON.stringify({"player_id":founduser.id,"score":ok});
 
-        var requestOptions = {
-        method: 'POST',
-        headers: myHeaders,
-        body: raw,
-        redirect: 'follow'
-        };
+        // var requestOptions = {
+        // method: 'POST',
+        // headers: myHeaders,
+        // body: raw,
+        // redirect: 'follow'
+        // };
 
-        fetch("https://keepthescore.co/api/yjxrblmwdae/score/?=&=", requestOptions)
-        .then(response => response.text())
-        .then(result => console.log(result))
-        .catch(error => console.log('error', error));
+        // fetch("https://keepthescore.co/api/yjxrblmwdae/score/?=&=", requestOptions)
+        // .then(response => response.text())
+        // .then(result => console.log(result))
+        // .catch(error => console.log('error', error));
         //second request end
 
-        console.log("a: "+name, " b: "+founduser.player_name)
-        return foundscore
+        // console.log("a: "+name, " b: "+founduser.player_name)
+        // return foundscore
     }
     async function getBestrank(ok, callbac) {
-        var aa = "https://keepthescore.co/api/yjxrblmwdae/board/";
-        var obj = await (await fetch(aa)).json();
-        ouput = (obj.players[0].player_name)
-        console.log("ATTENTION||||||WHAT YOU HAVE BEEN WAITING FOR",ok)
-        console.log(ouput)
-        getRanking(ok,obj)
+        // var aa = "https://keepthescore.co/api/yjxrblmwdae/board/";
+        // var obj = await (await fetch(aa)).json();
+        // ouput = (obj.players[0].player_name)
+        // console.log("ATTENTION||||||WHAT YOU HAVE BEEN WAITING FOR",ok)
+        // console.log(ouput)
+        getRanking(ok)
 //         ins(ouput+" has the best grade")
 //         ins("You have the #"+getRanking(ok,obj)+" best grade in the class","https://elliotdoescode.github.io/test/")
             // ins("View Leaderboard","https://sleepy-kalam-2cc1fa.netlify.app/")
-            ins(⚠️"Down for maintenance⚠️")
+            ins("⚠️Down for maintenance⚠️")
         callbac()
     }
     
