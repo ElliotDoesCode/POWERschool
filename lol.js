@@ -1,6 +1,6 @@
 if (document.title.indexOf("Grades and Attendance") != -1) {
     var version = "v1.6"
-    var colorpic = "#beb5ff"
+    var colorpic = "#b5dcff"
     //Better colors
 
     function removeStyles(el) {
