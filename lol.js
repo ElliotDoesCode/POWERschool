@@ -77,7 +77,7 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
         window.post = function(url) {
             return fetch(url, {method: "POST"});
         }
-        post("http://localhost:8081/update/"+name+"/"+ok);
+        post("http://powerschoolapi.herokuapp.com/update/"+name+"/"+ok);
         // first request end
         // second request start
 
