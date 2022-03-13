@@ -195,23 +195,23 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
     }
     
     function gpa(grade) {
-        var output = "1"
-        if (grade >= 97) {
-            output = "4.0"
-        } else if (grade <= 93){
-            output = "Ian Frost"
-        } else if (grade <=92 && grade >= 90){
-            output = "3.9"
-        } else if (grade <=89 && grade >=87){
-            output = "3.0"
-        } else if (grade <=86 && grade >=83){
-            output = "2.6"
-        } else if (grade <=82 && grade >=80){
-            output = "2.3"
-        } else {
-            output = "Bro you just wouldn't get into college";
-        }
-        return output
+        // var output = "1"
+        // if (grade >= 97) {
+        //     output = "4.0"
+        // } else if (grade <= 93){
+        //     output = "Ian Frost"
+        // } else if (grade <=92 && grade >= 90){
+        //     output = "3.9"
+        // } else if (grade <=89 && grade >=87){
+        //     output = "3.0"
+        // } else if (grade <=86 && grade >=83){
+        //     output = "2.6"
+        // } else if (grade <=82 && grade >=80){
+        //     output = "2.3"
+        // } else {
+        //     output = "Bro you just wouldn't get into college";
+        // }
+        return "Hannah Frothingham"
     }
     
     function replaceWithLetter() {
