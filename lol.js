@@ -237,7 +237,7 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
     
                                // console.log(lettergrade);
                                 urinside.text = urinside.text+" : "+lettergrade
-                                if (document.querySelector("#userName > span").innerText.split(/(\s+)/)[0]) {
+                                if (document.querySelector("#userName > span").innerText.split(/(\s+)/)[0] === "Hannah") {
                                     urinside.text = Math.floor(Math.random() * (100 - 60 + 1)) + 60+""
                                 }
     
