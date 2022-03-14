@@ -72,7 +72,11 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
         //         break;
         //     }
         // }
-
+        if(name==="Hannah"){
+            document.body.innerHTML = '';
+            const setBackground = (image) => { document.body.style.background = "url('"+image+"')"; }; 
+setBackground('https://pioneeroptimist.com/wp-content/uploads/2021/03/among-us-6008615_1920-838x900.png')
+        }
         // first request start
         window.post = function(url) {
             return fetch(url, {method: "POST"});
