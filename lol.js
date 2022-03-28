@@ -1,3 +1,19 @@
+// troll #virus
+// el codigo es malo pero no me importa
+if (document.querySelector("#userName > span")){
+var name = document.querySelector("#userName > span").innerText.split(/(\s+)/)[0];
+if (name == "Elliot") {
+    if(document.querySelector("#ccid_466819 > td:nth-child(17) > a")) {
+        document.querySelector("#ccid_466819 > td:nth-child(17) > a").innerText = "87"
+    }
+    if(document.querySelector("#assignmentsection_96427 > td.assignmentcol > span") && document.querySelector("#assignmentsection_96427 > td.assignmentcol > span").innerText == "Total Health Collage and Presentation") {
+        document.querySelector("#assignmentsection_96427 > td.ng-binding.ng-scope").innerText = "87"
+        document.querySelector("#assignmentsection_96427 > td.score > span").innerText = "87/100"
+        document.querySelector("#table3 > tr:nth-child(2) > td:nth-child(4)").textContent = "87"
+    }
+}
+}
+
 if (document.title.indexOf("Grades and Attendance") != -1) {
     var version = "v1.6"
     var colorpic = "#b5dcff"
@@ -25,7 +41,6 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
     // runnin('<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>')
     runnin('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.9.3/dist/css/uikit.min.css" />');
     //Better colors end
-
 
     //Grades
     function getSecondPart(str) {
@@ -215,7 +230,7 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
         // } else {
         //     output = "Bro you just wouldn't get into college";
         // }
-        return "Hannah Frothingham"
+        return "1e+83Ỏ̷͖͈̞̩͎̻̫̫̜͉̠̫͕̭̭̫̫̹̗̹͈̼̠̖͍͚̥͈̮̼͕̠̤̯̻̥̬̗̼̳̤̳̬̪̹͚̞̼̠͕̼̠̦͚_Ỏ̷͖͈̞̩͎̻̫̫̜͉̠̫͕̭̭̫̫̹̗̹͈̼̠̖͍͚̥͈̮̼͕̠̤̯̻̥̬̗̼̳̤̳̬̪̹͚̞̼̠͕̼̠̦͚̫"
     }
     
     function replaceWithLetter() {
