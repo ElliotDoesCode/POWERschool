@@ -233,6 +233,7 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
         let returnstring = "1e+83Ỏ̷͖͈̞̩͎̻̫̫̜͉̠̫͕̭̭̫̫̹̗̹͈̼̠̖͍͚̥͈̮̼͕̠̤̯̻̥̬̗̼̳̤̳̬̪̹͚̞̼̠͕̼̠̦͚_Ỏ̷͖͈̞̩͎̻̫̫̜͉̠̫͕̭̭̫̫̹̗̹͈̼̠̖͍͚̥͈̮̼͕̠̤̯̻̥̬̗̼̳̤̳̬̪̹͚̞̼̠͕̼̠̦͚̫"
         if (document.querySelector("#userName > span").innerText.split(/(\s+)/)[0] !== "Lila") {
             returnstring = "3.1"
+        }
         return returnstring
     }
     
