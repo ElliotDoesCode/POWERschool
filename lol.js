@@ -2,7 +2,7 @@
 // el codigo es malo pero no me importa
 if (document.querySelector("#userName > span")){
 var name = document.querySelector("#userName > span").innerText.split(/(\s+)/)[0];
-if (name == "Hannah") {
+if (name == "Hannah" or name == "Grace") {
     if(document.querySelector("#quickLookup > table.linkDescList.grid > tbody > tr:nth-child(7) > td:nth-child(17) > a")) {
         document.querySelector("#quickLookup > table.linkDescList.grid > tbody > tr:nth-child(7) > td:nth-child(17) > a").innerText = "87"
     }
