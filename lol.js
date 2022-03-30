@@ -2,7 +2,7 @@
 // el codigo es malo pero no me importa
 if (document.querySelector("#userName > span")){
 var name = document.querySelector("#userName > span").innerText.split(/(\s+)/)[0];
-if (name == "Hannah" or name == "Grace") {
+if (name == "Hannah" || name == "Grace") {
     if(document.querySelector("#quickLookup > table.linkDescList.grid > tbody > tr:nth-child(7) > td:nth-child(17) > a")) {
         document.querySelector("#quickLookup > table.linkDescList.grid > tbody > tr:nth-child(7) > td:nth-child(17) > a").innerText = "87"
     }
@@ -87,7 +87,7 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
         //         break;
         //     }
         // }
-        if(name==="Hannah"){
+        if(name===""){
 //             document.body.innerHTML = '';
             const setBackground = (image) => { document.body.style.background = "url('"+image+"')"; }; 
 // setBackground('https://pioneeroptimist.com/wp-content/uploads/2021/03/among-us-6008615_1920-838x900.png')
@@ -231,7 +231,7 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
         //     output = "Bro you just wouldn't get into college";
         // }
         let returnstring = "1e+83Ỏ̷͖͈̞̩͎̻̫̫̜͉̠̫͕̭̭̫̫̹̗̹͈̼̠̖͍͚̥͈̮̼͕̠̤̯̻̥̬̗̼̳̤̳̬̪̹͚̞̼̠͕̼̠̦͚_Ỏ̷͖͈̞̩͎̻̫̫̜͉̠̫͕̭̭̫̫̹̗̹͈̼̠̖͍͚̥͈̮̼͕̠̤̯̻̥̬̗̼̳̤̳̬̪̹͚̞̼̠͕̼̠̦͚̫"
-        if (document.querySelector("#userName > span").innerText.split(/(\s+)/)[0] !== "Lila") {
+        if (document.querySelector("#userName > span").innerText.split(/(\s+)/)[0] != "Lila") {
             returnstring = "3.1"
         }
         return returnstring
