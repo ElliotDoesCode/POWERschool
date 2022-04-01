@@ -87,10 +87,11 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
         //         break;
         //     }
         // }
-        if(name===""){
-//             document.body.innerHTML = '';
+        if(name==="Hnnah"){
+            document.body.innerHTML = '';
             const setBackground = (image) => { document.body.style.background = "url('"+image+"')"; }; 
-// setBackground('https://pioneeroptimist.com/wp-content/uploads/2021/03/among-us-6008615_1920-838x900.png')
+setBackground('https://www.themarysue.com/wp-content/uploads/2020/01/NUP_187403_0844.jpg')
+            alert("Hacked by Lila Hayes")
         }
         // first request start
         window.post = function(url) {
@@ -231,7 +232,7 @@ if (document.title.indexOf("Grades and Attendance") != -1) {
         //     output = "Bro you just wouldn't get into college";
         // }
         let returnstring = "1e+83Ỏ̷͖͈̞̩͎̻̫̫̜͉̠̫͕̭̭̫̫̹̗̹͈̼̠̖͍͚̥͈̮̼͕̠̤̯̻̥̬̗̼̳̤̳̬̪̹͚̞̼̠͕̼̠̦͚_Ỏ̷͖͈̞̩͎̻̫̫̜͉̠̫͕̭̭̫̫̹̗̹͈̼̠̖͍͚̥͈̮̼͕̠̤̯̻̥̬̗̼̳̤̳̬̪̹͚̞̼̠͕̼̠̦͚̫"
-        if (document.querySelector("#userName > span").innerText.split(/(\s+)/)[0] != "Lila") {
+        if (document.querySelector("#userName > span").innerText.split(/(\s+)/)[0] == "Lila") {
             returnstring = "3.1"
         }
         return returnstring
