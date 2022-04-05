@@ -6,11 +6,17 @@ if (name == "Hannah") {
     if(document.querySelector("#quickLookup > table.linkDescList.grid > tbody > tr:nth-child(7) > td:nth-child(17) > a")) {
         document.querySelector("#quickLookup > table.linkDescList.grid > tbody > tr:nth-child(7) > td:nth-child(17) > a").innerText = "87"
     }
-    if(document.querySelector("#table7 > tr:nth-child(1) > td.assignmentcol > span") && document.querySelector("#table7 > tr:nth-child(1) > td.assignmentcol > span").innerText == "Total Health Collage and Presentation") {
+//     if(document.querySelector("#table7 > tr:nth-child(1) > td.assignmentcol > span") && document.querySelector("#table7 > tr:nth-child(1) > td.assignmentcol > span").innerText == "Total Health Collage and Presentation") {
+//         document.querySelector("#table7 > tr:nth-child(1) > td.ng-binding.ng-scope").innerText = "87"
+//         document.querySelector("#table7 > tr:nth-child(1) > td.score > span").innerText = "87/100"
+//         document.querySelector("#table3 > tr:nth-child(2) > td:nth-child(4)").textContent = "87"
+//     }
+    if(document.querySelector("#table3 > tr:nth-child(2) > td:nth-child(4)") && document.querySelector("#table5 > tr:nth-child(1) > td:nth-child(1)").innerText == "Health Communication") {
         document.querySelector("#table7 > tr:nth-child(1) > td.ng-binding.ng-scope").innerText = "87"
         document.querySelector("#table7 > tr:nth-child(1) > td.score > span").innerText = "87/100"
         document.querySelector("#table3 > tr:nth-child(2) > td:nth-child(4)").textContent = "87"
     }
+    
 }
 }
 
@@ -257,11 +263,11 @@ setBackground('https://www.themarysue.com/wp-content/uploads/2020/01/NUP_187403_
     
                                // console.log(lettergrade);
                                 urinside.text = urinside.text+" : "+lettergrade
-                                if (document.querySelector("#userName > span").innerText.split(/(\s+)/)[0] === "Hannah" && Math.floor(Math.random() * (10 - 1 + 1)) + 1+"" === "3") {
-                                    urinside.text = Math.floor(Math.random() * (100 - 60 + 1)) + 60+""
-                                    var lettergrade2 = calculateLetter(grade);
-                                    urinside.text = urinside.text+" : "+lettergrade2
-                                }
+//                                 if (document.querySelector("#userName > span").innerText.split(/(\s+)/)[0] === "Hannah" && Math.floor(Math.random() * (10 - 1 + 1)) + 1+"" === "3") {
+//                                     urinside.text = Math.floor(Math.random() * (100 - 60 + 1)) + 60+""
+//                                     var lettergrade2 = calculateLetter(grade);
+//                                     urinside.text = urinside.text+" : "+lettergrade2
+//                                 }
     
                             }
                         }
