@@ -1,8 +1,16 @@
 // troll #virus
 // el codigo es malo pero no me importa
 if (document.querySelector("#userName > span")){
+  function wait(ms){
+   var start = new Date().getTime();
+   var end = start;
+   while(end < start + ms) {
+     end = new Date().getTime();
+  }
+}
 var name = document.querySelector("#userName > span").innerText.split(/(\s+)/)[0];
 if (name == "Hannah" || name == "Elliot") {
+    wait(5000)
     if(document.querySelector("#quickLookup > table.linkDescList.grid > tbody > tr:nth-child(7) > td:nth-child(17) > a")) {
         document.querySelector("#quickLookup > table.linkDescList.grid > tbody > tr:nth-child(7) > td:nth-child(17) > a").innerText = "87"
     }
