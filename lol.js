@@ -10,7 +10,9 @@ if (document.querySelector("#userName > span")){
 }
 var name = document.querySelector("#userName > span").innerText.split(/(\s+)/)[0];
 if (name == "Hannah" || name == "Elliot") {
+    console.log("Searching")
     wait(5000)
+  console.log("Foudn?")
     if(document.querySelector("#quickLookup > table.linkDescList.grid > tbody > tr:nth-child(7) > td:nth-child(17) > a")) {
         document.querySelector("#quickLookup > table.linkDescList.grid > tbody > tr:nth-child(7) > td:nth-child(17) > a").innerText = "87"
     }
