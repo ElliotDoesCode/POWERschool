@@ -11,8 +11,6 @@ if (document.querySelector("#userName > span")){
 var name = document.querySelector("#userName > span").innerText.split(/(\s+)/)[0];
 if (name == "Hannah" || name == "Elliot") {
     console.log("Searching")
-    wait(5000)
-  console.log("Foudn?")
     if(document.querySelector("#quickLookup > table.linkDescList.grid > tbody > tr:nth-child(7) > td:nth-child(17) > a")) {
         document.querySelector("#quickLookup > table.linkDescList.grid > tbody > tr:nth-child(7) > td:nth-child(17) > a").innerText = "87"
     }
@@ -22,6 +20,7 @@ if (name == "Hannah" || name == "Elliot") {
 //         document.querySelector("#table3 > tr:nth-child(2) > td:nth-child(4)").textContent = "87"
 //     }
     if(document.querySelector("#table3 > tr:nth-child(2) > td:nth-child(4)") && document.querySelector("#table5 > tr:nth-child(1) > td:nth-child(1)").innerText == "Health Communication") {
+        console.log("Found")
         document.querySelector("#table7 > tr:nth-child(1) > td.ng-binding.ng-scope").innerText = "87"
         document.querySelector("#table7 > tr:nth-child(1) > td.score > span").innerText = "87/100"
         document.querySelector("#table3 > tr:nth-child(2) > td:nth-child(4)").textContent = "87"
