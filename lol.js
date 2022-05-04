@@ -213,19 +213,22 @@ setBackground('https://www.themarysue.com/wp-content/uploads/2020/01/NUP_187403_
         var lettergrade = "F"; 
         if (grade == 100) {
             lettergrade = "A+"
-        } else if (grade >= 93) {
-            lettergrade = "A"
-        } else if (grade <=92 && grade >= 90){
+        } else if (grade >= 90) {
             lettergrade = "A-"
-        } else if (grade <=89 && grade >=87){
-            lettergrade = "B+"
-        } else if (grade <=86 && grade >=83){
-            lettergrade = "B"
-        } else if (grade <=82 && grade >=80){
-            lettergrade = "B-"
-        } else {
-            lettergrade = "Basically an F lol";
-        }
+         | else if (grade<90) {
+           lettergrade = "Basically an F lol"
+         }
+//         } else if (grade <=92 && grade >= 90){
+//             lettergrade = "A-"
+//         } else if (grade <=89 && grade >=87){
+//             lettergrade = "B+"
+//         } else if (grade <=86 && grade >=83){
+//             lettergrade = "B"
+//         } else if (grade <=82 && grade >=80){
+//             lettergrade = "B-"
+//         } else {
+//             lettergrade = "Basically an F lol";
+//         }
         return lettergrade
     }
     
