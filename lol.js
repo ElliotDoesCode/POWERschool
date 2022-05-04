@@ -215,7 +215,7 @@ setBackground('https://www.themarysue.com/wp-content/uploads/2020/01/NUP_187403_
             lettergrade = "A+"
         } else if (grade >= 90) {
             lettergrade = "A-"
-         | else if (grade<90) {
+        } else if (grade<90) {
            lettergrade = "Basically an F lol"
          }
 //         } else if (grade <=92 && grade >= 90){
